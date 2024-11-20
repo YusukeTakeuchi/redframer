@@ -1,0 +1,17 @@
+{
+  "name": "redframer",
+  "version": "1.0.0",
+  "description": "Show red frames",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "package": "electron-packager . --icon=redframer.icns  --overwrite --out=dist"
+  },
+  "author": "Yusuke Takeuchi",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^27.0.0",
+    "electron-packager": "^17.1.2"
+  }
+}
