@@ -12,15 +12,19 @@ function createWindow() {
   mainWindow.loadFile('index.html');
 
   mainWindow.webContents.on('before-input-event', (event, input) => {
-    processKey(mainWindow, input.key);
+    if (processKey(mainWindow, input.key)) {
+      event.preventDefault();
+    }
   });
 }
 
 function processKey(window, key) {
   if (key === 'Escape') {
     window.close();
+    return true;
   } else if (key === ' ') {
     createWindow();
+    return true;
   }
 }
 
