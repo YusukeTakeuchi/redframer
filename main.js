@@ -40,6 +40,7 @@ function createColorPickerWindow(parentWindowId) {
   });
 
   colorPickerWindow.loadFile('colorpicker.html');
+  colorPickerWindow.setAlwaysOnTop(true);
 
   return colorPickerWindow;
 }
