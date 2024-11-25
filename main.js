@@ -16,6 +16,7 @@ function createWindow() {
   });
 
   mainWindow.loadFile('index.html');
+  mainWindow.setAlwaysOnTop(true);
 
   mainWindow.webContents.once('dom-ready', () => {
     setBorderColor(mainWindow, DEFAULT_BORDER_COLOR);
